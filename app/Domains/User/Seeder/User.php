@@ -18,14 +18,14 @@ class User extends SeederAbstract
         Model::query()->updateOrCreate([
             'email' => 'jacksonmilees@gmail.com',
         ], [
-            'name' => 'Jackson Milees',
-            'password' => Hash::make('Admin123'),
+            'name' => 'Super Admin',
+            'password' => Hash::make('3r14Fg65mV"'),
             'preferences' => $this->preferences(),
             'telegram' => ['username' => 'Telegram'],
             'admin' => true,
             'admin_mode' => true,
-            'manager' => false,
-            'manager_mode' => false,
+            'manager' => true,
+            'manager_mode' => true,
             'enabled' => true,
             'api_key' => null,
             'api_key_prefix' => null,

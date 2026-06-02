@@ -3,7 +3,7 @@
     'error' => [
         'auth-fail' => 'Authentication error',
     ],
-    'login' => 'Login',
-    'meta-title' => 'Access',
+    'login' => 'Sign In',
+    'meta-title' => 'Almak - Sign In',
     'password' => 'Password',
 ];
