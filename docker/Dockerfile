@@ -29,8 +29,10 @@ COPY  ./ /app
 
 RUN echo ":set noshowmode" >> $HOME/.vimrc
 
+RUN sed -i 's/\r$//' ./docker/init.sh
+
 RUN git config --global --add safe.directory /app
 
 RUN COMPOSER_ALLOW_SUPERUSER=1 ./composer install --no-dev --optimize-autoloader --classmap-authoritative --no-scripts
 
-CMD ["./docker/init.sh"]
+CMD ["bash", "./docker/init.sh"]

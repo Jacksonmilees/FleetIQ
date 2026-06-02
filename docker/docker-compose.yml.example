@@ -45,11 +45,11 @@ services:
             context: ..
             dockerfile: ./docker/Dockerfile
         ports:
-            - "8080:80"
-            - "8091:8091"
+            - "8081:80"
+            - "8092:8091"
         expose:
-            - "8080"
-            - "8091"
+            - "8081"
+            - "8092"
         networks:
             - gpstracker-network
         tty: true
