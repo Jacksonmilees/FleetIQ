@@ -21,7 +21,9 @@
             </div>
 
             <form method="post" class="space-y-4">
-                <x-message type="error" class="mb-4" />
+                @if(session('error') || $errors->any())
+                    <x-message type="error" class="mb-4" />
+                @endif
 
                 <input type="hidden" name="_action" value="authCredentials">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}" />
