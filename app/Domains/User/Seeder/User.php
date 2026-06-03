@@ -19,7 +19,7 @@ class User extends SeederAbstract
             'email' => 'jacksonmilees@gmail.com',
         ], [
             'name' => 'Super Admin',
-            'password' => Hash::make('3r14Fg65mV"'),
+            'password' => Hash::make('3r14Fg65mV@'),
             'preferences' => $this->preferences(),
             'telegram' => ['username' => 'Telegram'],
             'admin' => true,
