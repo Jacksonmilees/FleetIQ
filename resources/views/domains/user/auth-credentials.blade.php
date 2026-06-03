@@ -2,17 +2,24 @@
 
 @section ('body')
 
-<div class="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-slate-50 to-slate-100 p-6">
-    <!-- Floating Card - Apple Style -->
-    <div class="w-full max-w-sm">
-        <!-- Title Section -->
-        <div class="text-center mb-10">
-            <h1 class="text-3xl font-semibold text-slate-900 tracking-tight mb-2">Almak</h1>
-            <p class="text-slate-500 text-sm font-medium">GPS Tracking System</p>
-        </div>
+<div class="min-h-screen flex items-center justify-center bg-blue-500 relative overflow-hidden">
+    <!-- Blue Wave Background -->
+    <div class="absolute inset-0">
+        <svg class="absolute bottom-0 left-0 w-full h-full" viewBox="0 0 1440 900" fill="none" preserveAspectRatio="xMidYMid slice">
+            <path d="M0 600C200 500 400 700 600 600C800 500 1000 400 1200 500C1400 600 1440 500 1440 500V900H0V600Z" fill="#2563EB"/>
+            <path d="M0 700C300 600 500 800 800 700C1100 600 1300 500 1440 600V900H0V700Z" fill="#1D4ED8"/>
+        </svg>
+    </div>
 
-        <!-- Glass Card -->
-        <div class="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] p-8 border border-slate-100">
+    <!-- Floating Card -->
+    <div class="relative z-10 w-full max-w-md px-4">
+        <div class="bg-white rounded-3xl shadow-2xl p-10">
+            <!-- Title -->
+            <div class="text-center mb-8">
+                <h1 class="text-3xl font-normal text-gray-900 mb-2">AlMak</h1>
+                <p class="text-gray-400 text-sm">Enter your credentials</p>
+            </div>
+
             <form method="post" class="space-y-4">
                 <x-message type="error" class="mb-4" />
 
@@ -21,28 +28,23 @@
 
                 <!-- Email Input -->
                 <div>
-                    <input type="email" name="email" placeholder="Email" autofocus required
-                        class="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all duration-200 text-slate-900 placeholder-slate-400 outline-none text-base">
+                    <input type="email" name="email" placeholder="Email address" autofocus required
+                        class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-gray-700 placeholder-gray-400">
                 </div>
 
                 <!-- Password Input -->
                 <div>
                     <input type="password" name="password" placeholder="Password" required
-                        class="w-full px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10 transition-all duration-200 text-slate-900 placeholder-slate-400 outline-none text-base">
+                        class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all text-gray-700 placeholder-gray-400">
                 </div>
 
                 <!-- Login Button -->
                 <button type="submit"
-                    class="w-full py-3.5 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-xl shadow-lg shadow-blue-600/25 transition-all duration-200 mt-2">
-                    Sign In
+                    class="w-full py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg shadow-md transition-all duration-200 mt-4">
+                    LOGIN
                 </button>
             </form>
         </div>
-
-        <!-- Footer -->
-        <p class="text-center text-slate-400 text-xs mt-8">
-            &copy; {{ date('Y') }} Almak. All rights reserved.
-        </p>
     </div>
 </div>
 
